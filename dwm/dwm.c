@@ -1636,8 +1636,8 @@ run(void)
 void
 runautostart(void)
 {
-	system("cd ~/.config/dotfiles/dwm; ./autostart_blocking");
-	system("cd ~/.config/dotfiles/dwm; ./autostart &");
+	system("cd ~/.config/dotfiles/suckless/dwm; ./autostart_blocking");
+	system("cd ~/.config/dotfiles/suckless/dwm; ./autostart &");
 }
 
 void
