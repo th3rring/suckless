@@ -1,4 +1,4 @@
 *.o
-dwm
-st
-dwmblocks
+dwm/dwm
+st/st
+dwmblocks/dwmblocks

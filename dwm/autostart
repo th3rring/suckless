@@ -1,0 +1,19 @@
+#! /bin/bash
+
+setxkbmap -option ctrl:nocaps
+
+#  Compositor
+picom &
+
+# Wallpaper
+nitrogen --restore &
+
+# Status Bar
+dwmblocks &
+
+## To update volume and brightness labels
+#pkill -RTMIN+10 dwmblocks
+
+## For extra bitmap fonts
+#xset +fp /home/therring/.local/share/fonts
+#xset fp rehash

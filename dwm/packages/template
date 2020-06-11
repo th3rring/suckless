@@ -1,0 +1,25 @@
+# Template file for 'hazel-dwm'
+pkgname=hazel-dwm
+version=6.2
+revision=1
+hostmakedepends="git"
+makedepends="libXinerama-devel libXft-devel freetype-devel"
+short_desc="Hazel's build of dwm"
+maintainer="Hazel Levine <rose.hazel@protonmail.ch>"
+license="MIT"
+homepage="http://dwm.suckless.org"
+
+do_fetch() {
+	git clone https://git.qtp2t.club/hazel/dwm.git $wrksrc
+}
+
+do_build() {
+	sed -i "/CFLAGS/s|\${CPPFLAGS}|& $CFLAGS|g" config.mk
+	sed -i "/LDFLAGS/s|\-s|$LDFLAGS|g" config.mk
+	make CC=$CC INCS="-I. -I${XBPS_CROSS_BASE}/usr/include/freetype2" LIBS="-lX11 -lXinerama -lXft -lfontconfig"
+}
+
+do_install() {
+	make PREFIX=/usr DESTDIR=$DESTDIR install
+	vlicense LICENSE
+}
