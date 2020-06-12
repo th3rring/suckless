@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "UbuntuMono Nerd Font:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Hack Nerd Font:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 10;
 
 /*
@@ -88,29 +88,77 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#22262e", /* color0 */
-	"#e27878", /* color1 */
-	"#b4be82", /* color2 */
-	"#e2a478", /* color3 */
-	"#84a0c6", /* color4 */
-	"#a093c7", /* color5 */
-	"#89b8c2", /* color6 */
-	"#c6c8d1", /* color7 */
-	"#6b7089", /* color8 */
-	"#e98989", /* color9 */
-	"#c0ca8e", /* color10 */
-	"#e9b189", /* color11 */
-	"#91acd1", /* color12 */
-	"#ada0d3", /* color13 */
-	"#95c4ce", /* color14 */
-	"#d2d4de", /* color15 */
+	"#5C6370", /* color0 */
+	"#E06C75", /* color1 */
+	"#98C379", /* color2 */
+	"#E5C07B", /* color3 */
+	"#61AFEF", /* color4 */
+	"#C678DD", /* color5 */
+	"#56B6C2", /* color6 */
+	"#ABB2BF", /* color7 */
+	"#4B5263", /* color8 */
+	"#BE5046", /* color9 */
+	"#98C379", /* color10 */
+	"#D19A66", /* color11 */
+	"#61AFEF", /* color12 */
+	"#C678DD", /* color13 */
+	"#56B6C2", /* color14 */
+	"#3E4452", /* color15 */
 	[255] = 0,
 	// more colors can be added after 255 to use with DefaultXX
-	"#c6c8d1", /* 256 -> cursor */
-	"#161821", /* 257 -> rev cursor*/
-	"#161821", /* 258 -> bg */
-	"#c6c8d1", /* 259 -> fg */
+	"#ABB2BF", /* 256 -> cursor */
+	"#1E2127", /* 257 -> rev cursor*/
+	"#1E2127", /* 258 -> bg */
+	"#ABB2BF", /* 259 -> fg */
 };
+//static const char *colorname[] = {
+//	"#282C34", /* color0 */
+//	"#E06C75", /* color1 */
+//	"#98C379", /* color2 */
+//	"#E5C07B", /* color3 */
+//	"#61AFEF", /* color4 */
+//	"#C678DD", /* color5 */
+//	"#56B6C2", /* color6 */
+//	"#ABB2BF", /* color7 */
+//	"#6b7089", /* color8 */
+//	"#e98989", /* color9 */
+//	"#c0ca8e", /* color10 */
+//	"#e9b189", /* color11 */
+//	"#91acd1", /* color12 */
+//	"#ada0d3", /* color13 */
+//	"#95c4ce", /* color14 */
+//	"#d2d4de", /* color15 */
+//	[255] = 0,
+//	// more colors can be added after 255 to use with DefaultXX
+//	"#c6c8d1", /* 256 -> cursor */
+//	"#282C34", /* 257 -> rev cursor*/
+//	"#282C34", /* 258 -> bg */
+//	"#c6c8d1", /* 259 -> fg */
+//};
+//static const char *colorname[] = {
+//	"#22262e", /* color0 */
+//	"#e27878", /* color1 */
+//	"#b4be82", /* color2 */
+//	"#e2a478", /* color3 */
+//	"#84a0c6", /* color4 */
+//	"#a093c7", /* color5 */
+//	"#89b8c2", /* color6 */
+//	"#c6c8d1", /* color7 */
+//	"#6b7089", /* color8 */
+//	"#e98989", /* color9 */
+//	"#c0ca8e", /* color10 */
+//	"#e9b189", /* color11 */
+//	"#91acd1", /* color12 */
+//	"#ada0d3", /* color13 */
+//	"#95c4ce", /* color14 */
+//	"#d2d4de", /* color15 */
+//	[255] = 0,
+//	// more colors can be added after 255 to use with DefaultXX
+//	"#c6c8d1", /* 256 -> cursor */
+//	"#161821", /* 257 -> rev cursor*/
+//	"#161821", /* 258 -> bg */
+//	"#c6c8d1", /* 259 -> fg */
+//};
 
 
 /*
