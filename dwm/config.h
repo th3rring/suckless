@@ -67,6 +67,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+static const char *logoffcmd[] = { "prompt", "Would you like to log off?", "dwmc quit" };
+static const char *poweroffcmd[] = { "prompt", "Power system off?", "poweroff" };
 static const char *termcmd[]  = { "st", NULL };
 static const char *webcmd[] = { "google-chrome", NULL };
 
@@ -114,7 +116,8 @@ static Key keys[] = {
 	//TAGKEYS(                        XK_7,                      6)
 	//TAGKEYS(                        XK_8,                      7)
 	//TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,     {.v = logoffcmd } },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,     {.v = poweroffcmd } },
 
         //{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
         //{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },

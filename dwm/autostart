@@ -1,15 +1,18 @@
 #! /bin/bash
 
 setxkbmap -option ctrl:nocaps
+xinput set-prop 15 309 -0.3
 
-#  Compositor
-picom &
+#  Compositor - giving me problems.
+#picom &
 
 # Wallpaper
 nitrogen --restore &
 
 # Status Bar
 dwmblocks &
+
+# TLP also starts on startup
 
 ## To update volume and brightness labels
 #pkill -RTMIN+10 dwmblocks
