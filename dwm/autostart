@@ -20,3 +20,11 @@ dwmblocks &
 ## For extra bitmap fonts
 #xset +fp /home/therring/.local/share/fonts
 #xset fp rehash
+
+# Start user suid wrapper if machine is virtual.
+system=$( systemd-detect-virt )
+
+if [ "$system" = 'vmware' ];
+then
+  vmware-user-suid-wrapper
+fi
