@@ -6,7 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Hack Nerd Font:pixelsize=18:antialias=true:autohint=true";
-static int borderpx = 10;
+static int borderpx = 0;
+/* static const int resizehints = 0; */
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -84,7 +85,8 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-float alpha = 0.8;
+ float alpha = 0.8;
+/* float alpha = 1; */
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
